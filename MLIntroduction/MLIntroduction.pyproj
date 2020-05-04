@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>97c95df0-3d86-4354-a188-127974ae54c3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Intro.py</StartupFile>
+    <StartupFile>TFIntro.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,7 +12,7 @@
     <Name>MLIntroduction</Name>
     <RootNamespace>MLIntroduction</RootNamespace>
     <IsWindowsApplication>True</IsWindowsApplication>
-    <InterpreterId>CondaEnv|CondaEnv|Anaconda3</InterpreterId>
+    <InterpreterId>CondaEnv|CondaEnv|myenv</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,15 +23,22 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="HW\Week1Submission.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Intro.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MLIntroduction.py" />
+    <Compile Include="TFIntro.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sudoko.py" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="CondaEnv|CondaEnv|Anaconda3" />
-    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda37-64" />
-    <InterpreterReference Include="Global|PythonCore|3.7" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|myenv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HW\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
